@@ -1,402 +1,314 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet" />
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet" />
-
-<title>Andriy Babayev</title>
-  <link rel="icon" href="images/logo.png" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="css/fontawesome/css/all.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/347904c773.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/adaptive.css" />
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <div id="Home">
-    <!---Start navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="#Home">
-        <img src="images/logo.png" width="50" height="50" class="d-inline-block" alt="" />
-        Andriy Babayev
+<body>
+  <div class="global">
+    <!-- <header>
+      <h1 class="title">
+        SINGOLO
+        <p>*</p>
+      </h1>
+      <a href="#0" class="trigger" onclick="burgerFunction()">
+        <i class="fa fa-bars"></i>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#Home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#About">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Contacts">Contacts</a>
-          </li>
+      <div class="mnu_top" id="hamburger">
+        <ul class="mnu_list">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
-    </nav>
-    <!--- End Navigation Bar -->
-    <!--- Start Carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100 img-fluid img-slider" src="images/slider1.jpg" alt="First slide" />
-          <div class="carousel-caption">
-            <h2>Welcome!</h2>
-            <p>...</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100 img-fluid img-slider" src="images/slider2.jpg" alt="Second slide" />
-          <div class="carousel-caption">
-            <h2>I want to continue to work</h2>
-            <h2>and develop in Front End technologies</h2>
-            <p>...</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100 img-fluid img-slider" src="images/slider3.jpg" alt="Third slide" />
-          <div class="carousel-caption">
-            <h2>I want to work in a team</h2>
-            <h2>with strong guys</h2>
-            <h2>with whom I can</h2>
-            <h2>exchange experience.</h2>
-            <p>...</p>
-          </div>
+    </header> -->
+    <section class="slider">
+      <div class="item">
+        <img src="./images/src/images_slide/1.jpeg" alt="1" />
+      </div>
+
+      <div class="item">
+        <img src="./images/src/images_slide/2.jpeg" alt="2" />
+      </div>
+
+      <div class="item">
+        <img src="./images/src/images_slide/3.jpeg" alt="3" />
+      </div>
+      <div class="slider-dots">
+        <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+        <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+        <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+      </div>
+      <a class="prev" onclick="minusSlide()">&#10094;</a>
+      <a class="next" onclick="plusSlide()">&#10095;</a>
+    </section>
+    <!-- <section class="section-our-service">
+      <div class="section-header">
+        <h1 class="name">Our Services</h1>
+        <div class="description-our-services" id="services">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+          erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
+          mauris condimentum nibh.
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-  <!--- End of Carousel -->
-  <!--- About-->
-  <div class="container">
-    <div class="row" id="About">
-      <div class="col navMenu">
-        <h2 class="text-center">~ Courses and Internship ~</h2>
-      </div>
-    </div>
-    <div class="row bg-light">
-      <div class="col-md-6">
-        <h3>Intern Angular Front-end developer</h3>
-        <p>Year of completion 2022</p>
-        <p>AWWCOR</p>
-
-        <h5>Responsibilities</h5>
-
-        <p>
-          Participation in a real project with the implementation of specific
-          real tasks
-        </p>
-      </div>
-      <div class="col-md-6" data-aos="fade-up">
-        <img class="img-fluid" src="images/aawor.jpg" />
-      </div>
-    </div>
-    <div class="row bg-light"><br /></div>
-    <div class="row bg-light">
-      <div class="col-md-6 order-md-1 order-2" data-aos="fade-up">
-        <img class="img-fluid" src="images/skill.jpg" />
-      </div>
-      <div class="col-md-6 order-md-12 order-1">
-        <h3>Courses Front-end</h3>
-        <p>Year of completion 2021</p>
-        <p>SkillUp</p>
-
-        <h5>Acquired knowledge and skills</h5>
-
-        <p>
-          Git, HTML5, HTML, TypeScript, Bootstrap, CSS, SASS, Agile, Scrum,
-          Node.js, AJAX, JavaScript, jQuery, OOP, SCSS, Angular, CSS3, JSON
-        </p>
-      </div>
-    </div>
-    <!--- End of Restaurant -->
-    <!--- Start of Menu-->
-    <div class="row" id="Portfolio">
-      <div class="col navMenu">
-        <h2 class="text-center">~ Portfolio ~</h2>
-      </div>
-    </div>
-
-
-
-    <div class="row bg-light">
-      <div class="col-md-4" data-aos="slide-up">
-        <div class="card view zoom">
-          <img class="card-img-top img-fluid" src="images/mts.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">~ Sales Representative ~</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                Fulfillment of trade visits
-              </li>
-              <li class="list-group-item">Motivation of sellers in retail outlets</li>
-              <li class="list-group-item">Checking the knowledge of tariffs and services by sellers in retail outlets</li>
-              <li class="list-group-item">Inventory control</li>
-              <li class="list-group-item">
-                Distributor control
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="slide-up">
-        <div class="card">
-          <img class="card-img-top img-fluid" src="images/vf.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">~ Territorial manager ~</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Trade team management</li>
-              <li class="list-group-item">Training, motivation of the sales team</li>
-              <li class="list-group-item">Conducting audits, store checks of the territory</li>
-              <li class="list-group-item">Negotiating with key partners</li>
-              <li class="list-group-item">Distributor control</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="slide-up">
-        <div class="card">
-          <img class="card-img-top img-fluid" src="images/aww.jpg" />
-          <div class="card-body">
-            <h5 class="card-title">~ Intern Front-End Developer (Angular) ~</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Participation in a real project</li>
-              <li class="list-group-item">Implementation of specific real tasks</li>
-              <li class="list-group-item">Participation in daily meetings with Teamlead </li>
-              <li class="list-group-item">Participation in meetings with collegues from Front-End</li>
-              <li class="list-group-item">
-                Accomplishment of team tasks
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--- End of Menu -->
-    <!--- Start of Reservation-->
-
-    <div class="container1" id="Skills">
-      <div class="col navMenu">
-        <h2 class="text-center">~ Skills ~</h2>
-      </div>
-      <ul class="gallery">
-        <li>
-          <div class="image">
-            <div class="info">
-          <span title="Climber">HTML 5</span>
-         </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">CSS 3</span>
+      <div class="services-list">
+        <div class="service-item-1">
+          <img src="./images/src/icon/services-item-1.png" alt="icon1" />
+          <div class="service-item-text">
+            <div class="name1">Custom Design</div>
+            <div class="description-item">
+              Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices
+              velit.
             </div>
           </div>
-        </li>
-        <li>
-          <div class="image">        
-            <div class="info">			
-          <span title="Climber">SASS</span>
-             </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">BOOTSTRAP</span>
-                  </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">Figma</span>
-               </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">Angular</span>
-        
         </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">JavaScript</span>
-               </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">TypeScript</span>
-          </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">Github</span>
-                 </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">Gulp</span>
-                  </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">Git</span>
-         </div>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <div class="info">			
-          <span title="Climber">Agile</span>
-          </div>
-          </div>
-        </li>
-      </ul>
-     </div>
-     <br/>
 
-    <div class="row bg-light">
-      <div class="col">
-        <h3>Send Message</h3>
-        <form>
-          <div class="form-row">
-            <div class="form-group col-8">
-                <label for="inputName"> Name (required)</label>
-                <input type="text" class="form-control" id="inputName" placeholder="Name" />
-              </div>
-                      <div class="form-group col-8">
-              <label for="inputEmail"> Email (required)</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email" />
-            </div>
-             <div class="form-group col-8">
-              <label for="inputCel"> Phone</label>
-              <input type="tel" class="form-control" id="inputCel" placeholder="Phone" />
-            </div>
-              <div class="form-group col-8">
-              <label for="inputComment"> Send a message</label>
-            <textarea class="form-control" rows="9" id="inputComment" placeholder="Write your message..."></textarea>
-          </div>
-         </div>
-          <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-              <button type="submit" class="btn btn-secondary btn-block">
-                SEND
-              </button>
+        <div class="service-item-2">
+          <img src="./images/src/icon/services-item-2.png" alt="icon2" />
+          <div class="service-item-text">
+            <div class="name2">Inovate Ideas</div>
+            <div class="description-item">
+              Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
             </div>
           </div>
+        </div>
+
+        <div class="service-item-3">
+          <img src="./images/src/icon/services-item-3.png" alt="icon3" />
+          <div class="service-item-text">
+            <div class="name3">Love Is The Answer</div>
+            <div class="description-item">
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+              condimentum.
+            </div>
           </div>
+        </div>
+
+        <div class="service-item-4">
+          <img src="./images/src/icon/services-item-4.png" alt="icon4" />
+          <div class="service-item-text">
+            <div class="name4">Responsive Layout</div>
+            <div class="description-item">
+              Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item-5">
+          <img src="./images/src/icon/services-item-5.png" alt="icon5" />
+          <div class="service-item-text">
+            <div class="name5">24 / 7 Support</div>
+            <div class="description-item">
+              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas
+              venenatis lorem .
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item-6">
+          <img src="./images/src/icon/services-item-6.png" alt="icon6" />
+          <div class="service-item-text">
+            <div class="name6">Feel Like A Star</div>
+            <div class="description-item">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="section-portfolio">
+      <div class="section-header1">
+        <h1 class="portfolio">Portfolio</h1>
+        <div class="description-portfolio" id="portfolio">
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+        </div>
+      </div>
+      <div class="filter-list" id="filter-list">
+        <!-- active перейшов в active-button !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <button class="btn active-button" onclick="filterSelection('all')">All</button>
+        <button class="btn" onclick="filterSelection('webdesign')">Web Design</button>
+        <button class="btn" onclick="filterSelection('graphicdesign')">Graphic Design</button>
+        <button class="btn" onclick="filterSelection('artwork')">Artwork</button>
+      </div>
+      <div class="picport">
+        <div class="pic-portfolio webdesign">
+          <img src="./images/src/image_portfolio/portfolio-1.png" alt="port1" />
+        </div>
+        <div class="pic-portfolio webdesign">
+          <img src="./images/src/image_portfolio/portfolio-2.png" alt="port2" />
+        </div>
+        <div class="pic-portfolio webdesign">
+          <img src="./images/src/image_portfolio/portfolio-3.png" alt="port3" />
+        </div>
+        <div class="pic-portfolio graphicdesign">
+          <img src="./images/src/image_portfolio/portfolio-4.png" alt="port4" />
+        </div>
+        <div class="pic-portfolio graphicdesign">
+          <img src="./images/src/image_portfolio/portfolio-5.png" alt="port5" />
+        </div>
+        <div class="pic-portfolio graphicdesign">
+          <img src="./images/src/image_portfolio/portfolio-6.png" alt="port6" />
+        </div>
+        <div class="pic-portfolio artwork">
+          <img src="./images/src/image_portfolio/portfolio-7.png" alt="port7" />
+        </div>
+        <div class="pic-portfolio artwork">
+          <img src="./images/src/image_portfolio/portfolio-8.png" alt="port8" />
+        </div>
+        <div class="pic-portfolio artwork">
+          <img src="./images/src/image_portfolio/portfolio-9.png" alt="port9" />
+        </div>
+        <div class="pic-portfolio artwork">
+          <img src="./images/src/image_portfolio/portfolio-10.png" alt="port10" />
+        </div>
+        <div class="pic-portfolio artwork">
+          <img src="./images/src/image_portfolio/portfolio-11.png" alt="port11" />
+        </div>
+        <div class="pic-portfolio artwork">
+          <img src="./images/src/image_portfolio/portfolio-12.png" alt="port12" />
+        </div>
+      </div>
+    </section>
+    <!-- <section class="section-about-us">
+      <div class="section-header2">
+        <h1 class="about">About Us</h1>
+        <div class="description-about-us" id="about">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+          erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
+          mauris condimentum nibh.
+        </div>
+      </div>
+      <div class="box-container3">
+        <div class="profile">
+          <div class="photo"><img src="./images/src/images_about/photo-1.png" alt="photo1" /></div>
+          <div class="pname"><b>Adam Jensen</b></div>
+          <div class="pdescription">
+            Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+          </div>
+          <div class="icons">
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.google.com"><i class="fab fa-google"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="profile">
+          <div class="photo"><img src="./images/src/images_about/photo-2.png" alt="photo2" /></div>
+          <div class="pname"><b>Desmond Miles</b></div>
+          <div class="pdescription">
+            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices
+            velit.
+          </div>
+          <div class="icons">
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.google.com"><i class="fab fa-google"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="profile">
+          <div class="photo"><img src="./images/src/images_about/photo-3.png" alt="photo3" /></div>
+          <div class="pname"><b>Scolara Visari</b></div>
+          <div class="pdescription">
+            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+            condimentum.
+          </div>
+          <div class="icons">
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.google.com"><i class="fab fa-google"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-contact">
+      <div class="section-header-contact">
+        <h1 class="contact-header" id="contact">Get a Quote</h1>
+        <div class="description-contact">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+          erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
+          mauris condimentum nibh.
+        </div>
+      </div>
+      <div class="info-box">
+        <form class="contact-form">
+          <input type="text" id="name" placeholder="Name (required)" />
+          <input type="text" id="email" placeholder="Email (required)" />
+          <input type="text" id="subject" placeholder="Subject" />
+          <textarea placeholder="Describe your project in detail..." rows="3"></textarea>
+          <button>SEND</button>
         </form>
+        <div class="contact-info">
+          <div class="header-contact-info">
+            <h1 class="contact" id="contact">Contact Information</h1>
+            <div class="main-description-contact">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit
+              amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat
+              felis.
+            </div>
+          </div>
+          <div class="adress-info">
+            <div class="main-adress">
+              <img src="./images/src/images_contact/ico-location.png" alt="location" />
+              <div class="text-adress">Elm St. 14/05 LostCity</div>
+            </div>
+            <div class="main-tel">
+              <img src="./images/src/images_contact/ico-phone.png" alt="telephone" />
+              <div class="text-tel">035283318635</div>
+            </div>
+            <div class="main-email">
+              <img src="./images/src/images_contact/ico-mail.png" alt="e-mail" />
+              <div class="text-email">info@singolo.com</div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="icons2">
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.google.com"><i class="fab fa-google"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </nav>
+    </footer> --> -->
   </div>
-    <!--- End of Reserve -->
-    <!--- Start of Our Location -->
-    <div class="row" id="Contacts">
-      <div class="col navMenu">
-        <h2 class="text-center">~ My Location ~</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div id="map" class="col-md-9 map"></div>
-      <div class="col-md-3">
-        <h3> Address:</h3>
-        <p> Heroiv Stalingrada ave,</p>
-        <p> Kharkiv,</p>
-        <p> 61000</p>
-        <p> Ukraine</p>
-        <h3>Email:</h3>
-        <p>babayevandriy@gmail.com</p>
-      </div>
-    </div>
-    <!--- End of Our Location -->
-    <div class="row footer bg-light">
-      <div class="col">
-        <p class="text-center">
-          Follow me:
-          <a class="social-icon" href="https://www.facebook.com/profile.php?id=100002124690539"><i
-              class="fab fa-facebook"></i></a>
-          <a class="social-icon" href="https://www.linkedin.com/in/andrey-babayev-56176864/"><i
-              class="fab fa-linkedin"></i></a>
-          <a class="social-icon" href="https://github.com/AndreyBabayev"><i class="fab fa-github"></i></a>
-          <a class="social-icon" href="https://www.instagram.com/l_eonidovi4/"><i class="fab fa-instagram"></i></a>
-          <a class="social-icon" href="https://www.skype.com/ru/"><i class="fab fa-skype"></i></a>
-        </p>
-      </div>
-      <div class="col">
-        <p class="text-center">Copyright &copy; 2022</p>
-      </div>
-      <div class="col">
-        <p class="text-center">
-          Powered by:
-          <a href="https://github.com/AndreyBabayev">Andriy Babayev</a>
-        </p>
-      </div>
-    </div>
-  </div>
-  <footer class="container">
-    <div class="row only-mobile">
-      <div class="col-6">
-        <a class="btn btn-primary btn-block text-center" href="tel:++380990153185"><i class="fa fa-phone"
-            aria-hidden="true"></i> Call</a>
-      </div>
-      <div class="col-6">
-        <a class="btn btn-success btn-block text-center" href="https://api.whatsapp.com/send?phone=+380990153185"><i
-            class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
-      </div>
-    </div>
-  </footer>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <script type="text/javascript" src="js/map.js"></script>
-  <script type="text/javascript" src="js/smooth-scroll.js"></script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script type="text/javascript" src="js/image-effect.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFZjOV0KA68G2YAh-rn7I3qKqCQEh_Ja0&callback=myMap"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+      integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+      integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+      crossorigin="anonymous"
+    ></script> -->
+  <script src="js/script.js"></script> -->
 </body>
 
 </html>
