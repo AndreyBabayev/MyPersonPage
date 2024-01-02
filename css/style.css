@@ -2,15 +2,18 @@ body {
   font-family: "Merienda";
   font-size: 15px;
 }
+
 .nav-item {
   padding-right: 12px;
   padding-left: 12px;
 }
+
 .flag {
   max-height: 20px;
   max-width: 20px;
   margin-top: 10px;
 }
+
 .nav-link.active {
   background-color: lightgrey !important;
 }
@@ -18,6 +21,7 @@ body {
 .reserve-container {
   position: relative;
 }
+
 .card-body {
   -webkit-transition: all 1s ease; /* Safari and Chrome */
   -moz-transition: all 1s ease; /* Firefox */
@@ -25,6 +29,7 @@ body {
   -ms-transition: all 1s ease; /* Opera */
   transition: all 1s ease;
 }
+
 .card-body:hover {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -67,7 +72,7 @@ body {
 }
 .container1 {
   position: relative;
-  background-image: url(/images/фон8.jpg); ;
+  background-image: url(/images/фон8.jpg);
   width: auto;
   height: 900px;
   overflow: hidden;
@@ -75,18 +80,18 @@ body {
 }
 
 .gallery {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	 margin: 0;
-  	padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .gallery li {
   position: center;
-  width: calc(20vw - 8em);
-  height: calc(25vh - 2em);
+  width: calc(32vw - 8em);
+  height: calc(35vh - 2em);
   box-sizing: border-box;
   margin: 2em 0 0 2em;
   transition: all 0.5s ease 0s;
@@ -102,7 +107,7 @@ body {
 }
 
 .gallery li:hover {
-  transform: scale(1.50);
+  transform: scale(1.5);
 }
 
 /* zoom start */
@@ -160,6 +165,28 @@ body {
   margin: auto;
   overflow: hidden;
 }
+.gallery li .image {
+  /* Общие стили для всех изображений в галерее */
+  transition: transform 0.5s ease;
+}
+
+.gallery li:hover .image {
+  transform: scale(1.2);
+  width: 100%;
+  height: 100%;
+  border: 0.15em solid #fff;
+  box-sizing: border-box;
+  border-radius: 0.15em;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffff;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
 
 .gallery li:nth-child(1) .image {
   background-image: url(/images/icon/ht.jpg);
@@ -193,23 +220,23 @@ body {
   background-position: center 10%;
 }
 .gallery li:nth-child(9) .image {
-	background-image: url(/images/icon/git.jpg);
-  }
-  .gallery li:nth-child(10) .image {
-	background-image: url(/images/icon/gulp.jpg);
-	background-position: right 75%;
-  }
-  .gallery li:nth-child(11) .image {
-	background-image: url(/images/icon/git1.jpg);
-	background-position: right 20%;
-  }
-  .gallery li:nth-child(12) .image {
-	background-image: url(/images/icon/ag.jpg);
-	background-position: center 10%;
-  }
+  background-image: url(/images/icon/git.jpg);
+}
+.gallery li:nth-child(10) .image {
+  background-image: url(/images/icon/gulp.jpg);
+  background-position: right 75%;
+}
+.gallery li:nth-child(11) .image {
+  background-image: url(/images/icon/git1.jpg);
+  background-position: right 20%;
+}
+.gallery li:nth-child(12) .image {
+  background-image: url(/images/icon/ag.jpg);
+  background-position: center 10%;
+}
 
 .info {
-  position: absolute;
+  position: relative;
   bottom: -1px;
   width: calc(100% + 2px);
   height: calc(100% + 2px);
@@ -222,53 +249,58 @@ body {
   transition: all 0.5s ease 0s;
 }
 
+.gallery li:hover .image {
+  /* Увеличение изображения при наведении */
+  transform: scale(1.2);
+}
+
 .info:hover {
   left: 0;
-  transition: all 0.5s ease 0s;
+}
+.info:before,
+.info:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  background: #fff8;
 }
 
 .info:before {
   content: "\271A";
-  position: absolute;
-  top: 20px;
   width: 50px;
   height: 50px;
   text-align: center;
-  background: radial-gradient(#fff0 15px, #fff8 16px);
   padding: 15px;
   left: 100%;
-  box-sizing: border-box;
   border-radius: 0 2em 2em 0;
   color: #fff8;
   font-size: 25px;
-  font-family: none;
   line-height: 22px;
 }
 
 .info:after {
-  --dot: conic-gradient(from 0deg at 0% 100%, var(--dark) 0 25%, #fff0 0 100%);
-  content: "Информация";
-  position: absolute;
-  top: 20px;
+  content: "Info";
   width: 100%;
   height: 50px;
   text-align: left;
-  background: var(--dot), var(--dot), var(--dot), var(--dot), var(--dot),
-    var(--dot), rgba(245, 239, 239, 0.533);
   padding: 15px 15px 15px 63px;
-  left: 0%;
-  box-sizing: border-box;
+  left: 0;
   border-radius: 0;
   color: var(--dark);
   font-size: 18px;
   line-height: 22px;
   mix-blend-mode: color-burn;
-  background-repeat: no-repeat;
+  background: conic-gradient(
+      from 0deg at 0% 100%,
+      var(--dark) 0 25%,
+      #fff0 0 100%
+    ),
+    rgba(245, 239, 239, 0.533);
   background-size: 4px 4px, 4px 4px, 4px 4px, 15px 2px, 15px 2px, 15px 2px;
   background-position: 26px 16px, 26px 23px, 26px 30px, 32px 17px, 32px 24px,
     32px 31px;
-  /*background: #fff0;*/
-  /*list-icon*/
+  text-shadow: 1px 1px 3px #fff;
+  text-shadow: 1px 1px 1px white;
 }
 
 .info span {
@@ -304,20 +336,24 @@ body {
 }
 
 /*climber*/
+
+/* Универсальные стили для .info span:nth-child(1):before и .info span:nth-child(1):after */
+.info span:nth-child(1):before,
+.info span:nth-child(1):after {
+  width: 7px;
+  border-radius: 100% 100% 100% 40%;
+}
+
 .info span:nth-child(1):before {
   background: radial-gradient(
     circle at 50% 50%,
     var(--dark) 2px,
     #fff0 3px 150%
   );
-  width: 7px;
-  height: 6px;
-  border-radius: 100% 100% 100% 40%;
   left: 16px;
   top: 2px;
   border: 3px solid var(--dark);
   border-top-color: #fff0;
-  background-repeat: no-repeat;
   transform: rotate(29deg);
 }
 
@@ -325,17 +361,14 @@ body {
   background: linear-gradient(180deg, var(--dark) 1px, #fff0 1px 150%);
   width: 4px;
   height: 7px;
-  border-radius: 100% 50% 100% 0%;
   left: 15px;
   top: 13px;
   border: 3px solid var(--dark);
   border-bottom-color: #fff0;
-  background-repeat: no-repeat;
   transform: rotate(-1deg);
 }
 
-.row bg-light{
-
+.row bg-light {
 }
 
 /*** MEDIA QUERIES ***/
